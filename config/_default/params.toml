@@ -9,7 +9,7 @@ logo_width = ""
 # if logo_webp set false, will not generate WEBP version of logo | default is true
 logo_webp = true
 # logo text will only show when logo is missing.
-logo_text = "Kross"
+logo_text = "Opy'l poils"
 
 # purgeCSS
 purge_css = true
@@ -23,13 +23,12 @@ google_tag_manager = "" # example: G-XXXXXXXXXX
 
 # custom script on header, example: custom_script= "<script>console.log(\"Hello World\")</script>"
 custom_script = ""
-
 # Author
-author = "Johnathan Smith"
+author = "Vanessa Pena"
 
 # copyright
-copyright = "Copyright by your company"
-theme_copyright = true
+copyright = "Copyright by Opy'l poil 2023 to present"
+theme_copyright = false
 
 # Preloader
 [preloader]
@@ -38,9 +37,9 @@ preloader = "images/preloader.gif" # use jpg, png, svg or gif format.
 
 # contact info
 [contact_info]
-address = "9567 Turner Trace Apt. BC C3G8A4"
-email = "info@email.com"
-mobile = "+211234565523"
+address = "7105 D888 Pont de Tanus, 12800 Tauriac-de-Naucelle"
+email = "vanessa.pena@wanadoo.fr"
+mobile = "+330612345678"
 
 # Crisp Chat
 [crisp_chat]
@@ -65,10 +64,10 @@ visitor = true
 
 # seo meta data for OpenGraph / Twitter Card
 [metadata]
-author = "Themefisher" 
+author = "Vanessa Pena" 
 description = "This is meta description" 
 image = "images/favicon.png" # this image will be used as fallback if a page has no image of its own
-keywords = ["Boilerplate", "Hugo", "Themefisher", "GetHugoThemes"] 
+keywords = ["Educatrice canin", "Comportementaliste canin", "Chien", "Animaux", "Educateur canin", "Coach comportementaliste animalier", "Analyse comportementale", "Education canine douce"] 
 
 # matomo tracking: see https://matomo.org/
 [matomo]
