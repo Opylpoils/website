@@ -1,6 +1,6 @@
 ---
 title: "About"
-description: "This is meta description."
+description: "Vous désirez comprendre les réactions de votre animal, ses besoins. Vous voulez l’éduquer. Méthode éducative douce, instaurant une relation saine." 
 author_image : "images/about/author.jpg"
 author_signature : "images/about/signature.png"
 draft: false
@@ -9,7 +9,7 @@ layout: "about"
 # work process
 work_process:
   enable : true
-  title : "Work Process"
+  title : "Le Processus"
   item:
   - title : "Research and Plan"
     icon : "images/icons/plan.png"
@@ -26,7 +26,7 @@ work_process:
 
 # team
 team:
-  enable: true
+  enable: false
   title : "My Team"
   team_member:
     - title : "Jack Schenziwe"
@@ -44,7 +44,7 @@ team:
 
 # client logo slider
 clients_logo_slider:
-  enable : true
+  enable : false
   title : "My Clients"
   # clients logo comes from 'params.toml' file
 ---

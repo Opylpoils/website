@@ -65,7 +65,7 @@ visitor = true
 # seo meta data for OpenGraph / Twitter Card
 [metadata]
 author = "Vanessa Pena" 
-description = "This is meta description" 
+description = "Vous désirez comprendre les réactions de votre animal, ses besoins. Vous voulez l’éduquer. Méthode éducative douce, instaurant une relation saine." 
 image = "images/favicon.png" # this image will be used as fallback if a page has no image of its own
 keywords = ["Educatrice canin", "Comportementaliste canin", "Chien", "Animaux", "Educateur canin", "Coach comportementaliste animalier", "Analyse comportementale", "Education canine douce"] 
 
