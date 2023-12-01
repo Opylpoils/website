@@ -11,14 +11,9 @@
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^5.0.0",
-    "@tinacms/cli": "^1.5.37",
-    "@types/node": "^20.10.0",
     "postcss": "^8.4.20",
     "postcss-cli": "^10.1.0",
     "prettier": "^2.8.1",
     "prettier-plugin-go-template": "0.0.13"
-  },
-  "dependencies": {
-    "tinacms": "^1.5.27"
   }
 }
