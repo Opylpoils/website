@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "yarn tinacms dev -c 'hugo server -D -p 1313'",
     "test": "hugo server --disableFastRender --navigateToChanged --templateMetrics --templateMetricsHints --verbose --buildDrafts --buildExpired --buildFuture --watch --forceSyncStatic -e production --minify",
-    "build": "hugo --gc --minify --templateMetrics --templateMetricsHints --verbose --buildDrafts --buildExpired --buildFuture --forceSyncStatic",
+    "build": "tinacms build && hugo --gc --minify",
     "update": "hugo mod clean && hugo mod get -u ./... && hugo mod tidy"
   },
   "devDependencies": {
