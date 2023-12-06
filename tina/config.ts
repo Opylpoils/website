@@ -22,7 +22,7 @@ export default defineConfig({
   },
   media: {
     tina: {
-      mediaRoot: "",
+      mediaRoot: "images",
       publicFolder: "static",
     },
   },
@@ -120,8 +120,8 @@ export default defineConfig({
                       type: 'object',
                       list: true,
                       ui: {
-                        itemProps: (item) => {
-                          return { name: item?.title}
+                        itemProps: (item)=>{
+                            return { label: item?.title };
                         },
                         defaultItem: {
                           title: "Competence",
@@ -174,8 +174,8 @@ export default defineConfig({
                       type: 'object',
                       list: true,
                       ui: {
-                        itemProps: (item) => {
-                          return { name: `${item?.title} `}
+                        itemProps: (item)=>{
+                            return { label: item?.title };
                         },
                         defaultItem: {
                           logo: "images/experience/icon-1.png",
@@ -230,8 +230,8 @@ export default defineConfig({
                       type: 'object',
                       list: true,
                       ui: {
-                        itemProps: (item) => {
-                          return { name: `${item?.title} `}
+                        itemProps: (item)=>{
+                            return { label: item?.title };
                         },
                         defaultItem: {
                           title: "Education",
@@ -280,8 +280,8 @@ export default defineConfig({
                       type: 'object',
                       list: true,
                       ui: {
-                        itemProps: (item) => {
-                          return { name: `${item?.title} `}
+                        itemProps: (item)=>{
+                            return { label: item?.title };
                         },
                         defaultItem: {
                           title: "Education",
@@ -358,8 +358,8 @@ export default defineConfig({
                       type: 'object',
                       list: true,
                       ui: {
-                        itemProps: (item) => {
-                          return { name: `${item?.name} `}
+                        itemProps: (item)=>{
+                            return { label: item?.title };
                         },
                         defaultItem: {
                           name: "lorem",
@@ -415,7 +415,301 @@ export default defineConfig({
           },
         ],
       },
-     
+      {
+        label: "Page A propos",
+        name: "about",
+        path: "content/english",
+        ui: {
+          allowedActions: {
+            create: false,
+            delete: false,
+          },
+        },
+        defaultItem: () => {
+            return {
+              // When a new post is created the title field will be set to "New post"
+              layout: 'about',
+            }
+        },
+        match: {
+          include: "about",
+        },
+
+        fields: [
+            {
+                name: 'title',
+                label: 'Titre',
+                type: 'string',
+            },
+            {
+                name: 'description',
+                label: 'Description',
+                type: 'string',
+                ui:{
+                    component: "textarea"
+                }
+            },
+            {
+                name: 'author_image',
+                label: 'Image Auteur',
+                type: 'image',
+            },
+            {
+                name: 'author_signature',
+                label: 'Image de Signature',
+                type: 'image',
+            },
+            {
+                name: 'draft',
+                label: 'Brouillon',
+                type: 'boolean',
+            },
+            {
+                type: "string",
+                name: "layout",
+                label: "Type de Page",
+                list: true,
+                options: [
+                    {
+                    value: "about",
+                    label: "A propos"
+                    }, {
+                    value: "contact",
+                    label: "Contact"
+                    }
+                ],
+
+            },
+            {
+                type: "rich-text",
+                name: "body",
+                label: "Body of Document",
+                description: "This is the markdown body",
+                isBody: true,
+            },
+            {
+                name: 'work_process',
+                label: 'Processus de Travail',
+                type: 'object',
+                fields: [
+                    {
+                        name: 'enable',
+                        label: 'Activer',
+                        type: 'boolean',
+                    },
+                    {
+                        name: 'title',
+                        label: 'Titre',
+                        type: 'string',
+                    },
+                    {
+                        name: 'item',
+                        label: 'Processus',
+                        type: 'object',
+                        list: true,
+                        ui: {
+                            
+                            itemProps: (item)=>{
+                                return { label: item?.title };
+                            },
+                            defaultItem: {
+                              title: "Processus",
+                              icon: "images/icons/plan.png",
+                              content : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <strong>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</strong> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+                              },
+                          },
+                        fields: [
+
+                            {
+                                name: 'title',
+                                label: 'Titre',
+                                type: 'string',
+                            },
+                            {
+                                name: 'icon',
+                                label: 'Image',
+                                type: 'image',
+                            },
+                            {
+                                name: 'content',
+                                label: 'Texte',
+                                type: 'string',
+                                ui:{
+                                    component:'textarea'
+                                }
+                            },
+                        ]
+                    },
+                ],
+            },
+            {
+                name: 'team',
+                label: 'Equipe',
+                type: 'object',
+                fields: [
+                    {
+                        name: 'enable',
+                        label: 'Activer',
+                        type: 'boolean',
+                    },
+                    {
+                        name: 'title',
+                        label: 'Titre',
+                        type: 'string',
+                    },
+                    {
+                        name: 'team_member',
+                        label: 'Mon Equipe',
+                        type: 'object',
+                        list: true,
+                        ui: {
+                            
+                            itemProps: (item)=>{
+                                return { label: item?.title };
+                            },
+                            defaultItem: {
+                              title: "Processus",
+                              image: "images/team/member-1.png",
+                              designation : "Lorem ipsum ",
+                              },
+                          },
+                        fields: [
+
+                            {
+                                name: 'title',
+                                label: 'Titre',
+                                type: 'string',
+                            },
+                            {
+                                name: 'image',
+                                label: 'Image',
+                                type: 'image',
+                            },
+                            {
+                                name: 'designation',
+                                label: 'Texte',
+                                type: 'string',
+                            },
+                        ]
+                    },
+                ],
+            },
+        ]
+      }, 
+      {
+        label: "Blog",
+        name: "post",
+        path: "content/english/blog",
+        ui: {
+          allowedActions: {
+            create: true,
+            delete: true,
+          },
+        },
+        match: {
+          exclude: "_index",
+        },
+
+        fields: [
+          {
+            name: 'title',
+            label: 'Titre',
+            type:'string',
+          },
+          {
+            name: 'date',
+            label: 'Date',
+            type:'datetime',
+          },
+          {
+            name: 'image',
+            label: 'Image',
+            type:'image',
+          },
+          {
+            name: 'description',
+            label: 'Description',
+            type:'string',
+          },
+          {
+            name: 'draft',
+            label: 'Brouillon',
+            type:'boolean',
+          },
+          {
+            type: "rich-text",
+            name: "body",
+            label: "Texte Du Blog",
+            description: "Texte afficher dans le Blog",
+            isBody: true,
+           },
+        ]
+      },
+      {
+        label: "Portfolio",
+        name: "portfolio",
+        path: "content/english/portfolio",
+        ui: {
+          allowedActions: {
+            create: true,
+            delete: true,
+          },
+        },
+        match: {
+          exclude: "_index",
+        },
+
+        fields: [
+          {
+            name: 'title',
+            label: 'Titre',
+            type:'string',
+          },
+          {
+            name: 'date',
+            label: 'Date',
+            type:'datetime',
+          },
+          {
+            name: 'image',
+            label: 'Image',
+            type:'image',
+          },
+          {
+            name: 'client',
+            label: 'Nom du Client',
+            type:'string',
+          },
+          {
+            name: 'project_url',
+            label: 'Lien Vers le Projet',
+            type:'string',
+          },
+          {
+            name: 'categories',
+            label: 'Categories',
+            type:'string',
+            list:true,
+          },
+          {
+            name: 'description',
+            label: 'Description',
+            type:'string',
+          },
+          {
+            name: 'draft',
+            label: 'Brouillon',
+            type:'boolean',
+          },
+          {
+            type: "rich-text",
+            name: "body",
+            label: "Texte Du Blog",
+            description: "Texte afficher dans le Blog",
+            isBody: true,
+           },
+        ]
+      }
     ],
   },
 });
