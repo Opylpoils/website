@@ -1,12 +1,12 @@
 {{ define "main" }}
 
-{{ with .Params.banner }}
+{{ with .Params.bannerTitle }}
 <!-- hero area -->
 <section class="hero-area bg-primary overflow-hidden" id="parallax">
   <div class="container">
     <div class="row">
       <div class="col-lg-10 mx-auto">
-        <h1 class="text-white font-secondary">{{ .title | safeHTML }}</h1>
+        <h1 class="text-white font-secondary">{{ . | safeHTML }}</h1>
       </div>
     </div>
   </div>

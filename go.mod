@@ -23,6 +23,7 @@ require (
 	github.com/gethugothemes/hugo-modules/seo-tools/matomo-analytics v0.0.0-20230215111008-4b102cd03551 // indirect
 	github.com/gethugothemes/hugo-modules/seo-tools/plausible-analytics v0.0.0-20230215111008-4b102cd03551 // indirect
 	github.com/gethugothemes/hugo-modules/seo-tools/site-verifications v0.0.0-20230215111008-4b102cd03551 // indirect
+	github.com/gethugothemes/hugo-modules/shortcodes/button v0.0.0-20231213094845-42e6b5af6245 // indirect
 	github.com/gethugothemes/hugo-modules/shortcodes/buttons v0.0.0-20230215111008-4b102cd03551 // indirect
 	github.com/gethugothemes/hugo-modules/shortcodes/codepen v0.0.0-20230215111008-4b102cd03551 // indirect
 	github.com/gethugothemes/hugo-modules/shortcodes/collapse v0.0.0-20230215111008-4b102cd03551 // indirect

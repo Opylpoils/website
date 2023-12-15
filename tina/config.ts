@@ -45,16 +45,9 @@ export default defineConfig({
 
         fields: [
           {
-            name: 'banner',
-            label: 'Baniere',
-            type:'object',
-            fields: [
-                {
-                    name: 'title',
-                    label: 'Titre',
-                    type: 'string',
-                }
-            ],
+            name: 'bannerTitle',
+            label: 'Titre de Baniere',
+            type:'string',
           },
           {
               name: 'about',
@@ -317,7 +310,7 @@ export default defineConfig({
           },
           {
               name: 'portfolio',
-              label: 'Portfolio',
+              label: 'Afficher une section Portfolio',
               type:'object',
               fields: [
                   {
@@ -339,7 +332,7 @@ export default defineConfig({
           },
           {
               name: 'testimonial',
-              label: 'Testimoni',
+              label: 'Témoignages',
               type:'object',
               fields: [
                   {
@@ -354,7 +347,7 @@ export default defineConfig({
                   },
                   {
                       name: 'item',
-                      label: 'Testimoni',
+                      label: 'Témoignages',
                       type: 'object',
                       list: true,
                       ui: {
@@ -398,7 +391,7 @@ export default defineConfig({
           },
           {
               name: 'blog',
-              label: 'Blog',
+              label: 'Afficher une section Blog',
               type:'object',
               fields: [
                   {
@@ -468,7 +461,6 @@ export default defineConfig({
                 type: "string",
                 name: "layout",
                 label: "Type de Page",
-                list: true,
                 options: [
                     {
                     value: "about",

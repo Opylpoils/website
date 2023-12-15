@@ -1,7 +1,6 @@
 ---
 # banner
-banner:
-  title : "Vanessa Pena <br> Educatrice canin "
+bannerTitle : "Vanessa Pena <br> Educatrice canin "
 
 # about
 about:
